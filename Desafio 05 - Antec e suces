@@ -1,0 +1,9 @@
+print('-=' * 20)
+print('  <<DESAFIO 5 - ANTECESSOR E SUCESSOR>>  ')
+print('-=' * 20)
+s = int(input('Digite um número: '))
+n1 = s - 1
+n2 = s + 1
+print(f'O valor é {s}, seu antecessor é {n1} e seu sucessor é {n2}.')
+print('-=' * 20)
+print('FIM')
