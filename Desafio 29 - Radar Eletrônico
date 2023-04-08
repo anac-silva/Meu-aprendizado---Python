@@ -1,0 +1,14 @@
+print('-=' * 25)
+print('  << DESAFIO 29 - RADAR ELETRÔNICO >>  ')
+print('-=' * 25)
+nome = input('Qual é seu nome? ')
+print('Olá {}, seja bem vindo(a)'.format(nome))
+velocidade = float(input('Qual velocidade: '))
+print('-=' * 25)
+if velocidade >80:
+    multa = (velocidade-80)*7
+    print('\033[31mVelocidade acima do limite, você foi multado no valor de R${:.2f}\033[m'.format(multa))
+else:
+    print('\033[32mVelocidade dentro do limite da rodovia.\033[m')
+print('-=' * 25)
+print('Fim')

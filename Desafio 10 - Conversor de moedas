@@ -1,0 +1,6 @@
+print('-=' * 25)
+print('  << DESAFIO 10 - CONVERSOR DE MOEDAS >>  ')
+print('-=' * 25)
+n = float(input('Digite a quantia em real que deseja converter: '))
+dol = float(input('Digite a cotação do dolar hoje: '))
+print(f'Com R${n:.2f} você pode comprar US${(n/dol):.2f}.')

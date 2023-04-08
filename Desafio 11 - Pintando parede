@@ -1,0 +1,8 @@
+print('-=' * 25)
+print('  << DESAFIO 11 - PINTANDO PAREDE >>  ')
+print('-=' * 25)
+larg = float(input('Qual a largura da parede que deseja pintar: '))
+alt = float(input('Qual a altura da parede que deseja pintar: '))
+area = larg * alt
+tinta = area / 2
+print(f' Sua parede tem dimensão de {larg}mx{alt}m e isso equivale a uma área de {area}m².')
