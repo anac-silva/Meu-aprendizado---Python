@@ -1,0 +1,6 @@
+print('-=' * 25)
+print('       << DESAFIO 13 - AUMENTO DE SALÁRIO>>  ')
+print('-=' * 25)
+sal = float(input('Qual é o valor do salário do funcionário? R$'))
+novo = sal + (sal * 0.15)
+print(f'O salário inicialmente era R${sal:.2f}, após o aumento de 15% o salário do funcionário passou a ser R${novo:.2f}.')

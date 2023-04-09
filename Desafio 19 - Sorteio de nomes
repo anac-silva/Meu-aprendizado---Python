@@ -1,0 +1,11 @@
+print('-=' * 25)
+print('       << DESAFIO 19 - SORTEIO DE NOMES >>  ')
+print('-=' * 25)
+from random import choice
+n1 = str(input('Digite o nome do primeiro aluno: '))
+n2 = str(input('Digite o nome do segundo aluno: '))
+n3 = str(input('Digite o nome do terceiro aluno: '))
+n4 = str(input('Digite o nome do quarto aluno: '))
+alunos = [n1, n2, n3, n4]
+sort = choice(alunos)
+print(f'O aluno sorteado para apagar a lousa foi {sort}')
