@@ -1,0 +1,13 @@
+print('-='*20)
+print('    \033[33mDESAFIO 60 - CALCULO DE FATORIAL\033[m')
+print('-='*20)
+n = int(input('Digite o numero para saber seu fatorial: '))
+cont = n
+f = 1
+print(f'Calculando fatorial de {n}! = ', end=' ')
+while cont > 0:
+    print(f'{cont} ', end=' ')
+    print('x' if cont > 1 else '=', end=' ')
+    f *= cont
+    cont -= 1
+print(f)

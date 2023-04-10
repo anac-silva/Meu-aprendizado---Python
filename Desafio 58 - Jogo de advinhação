@@ -1,0 +1,22 @@
+from random import randint
+print('-=' * 10)
+print('\033[31mDESAFIO 58 - JOGO DE ADIVINHAÇÃO\033[m')
+print('-=' * 10)
+nome = str(input('Qual é seu nome? '))
+print('Seja bem vindo(a) {}!!!'.format(nome))
+print('Vamos jogar um jogo, eu vou pensar em um numero e você vai tentar adivinhar que numero eu pensei')
+pc = randint(0, 10)
+eu = int(input('Digite um valor de 0 a 10: '))
+n = 1
+while eu != pc:
+    n += 1
+    if eu > pc:
+        print('Menos, tente outra vez!')
+        eu = int(input('Digite outro valor: '))
+    else:
+        print('Mais, tente outra vez!')
+        eu = int(input('Digite outro valor: '))
+print('\033[33mParabens, você acertou! O numero que eu pensei foi {}'.format(pc))
+print('Foram necessários {} tentativas para acertar o resultado!\033[m'.format(n))
+print('-='*30)
+print('FIM')

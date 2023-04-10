@@ -1,0 +1,14 @@
+print('-=' * 25)
+print('        << DESAFIO 38 - VALOR MAIOR >>  ')
+print('-=' * 25)
+nome = str(input('Olá, qual é seu nome? '))
+print('Seja bem-vindo(a) {}'.format(nome))
+valor1 = int(input('Digite um numero: '))
+valor2 = int(input('Digite outro numero: '))
+if valor1 > valor2:
+    print('O PRIMEIRO valor é o maior')
+elif valor2 > valor1:
+    print('O SEGUNDO valor é o maior')
+else:
+    print('Os dois valores são IGUAIS.')
+print('FIM')

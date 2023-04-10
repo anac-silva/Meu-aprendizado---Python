@@ -1,0 +1,22 @@
+print('-=' * 20)
+print('   << DESAFIO 62 - TERMOS DE UMA PA >>  ')
+print('-=' * 20)
+p = int(input('Digite o primeiro termo: '))
+r = int(input('Digite a razão: '))
+c = 0
+s = p
+q = 1
+total = 0
+while q != 0:
+    print(f'{p} → ', end='')
+    while c < 10:
+        s = s + r
+        c += 1
+        print(f'{s}', '→' if c != 10 else 'Pausa', end=' ')
+    q = int(input('\nGostaria de ver mais quantos termos? '))
+    cont = q
+    s = s + r
+    cont -= 1
+    print('{}'.format(s), '→' if cont != q else ' ', end=' ')
+    print('Pausa')
+print('FIM')

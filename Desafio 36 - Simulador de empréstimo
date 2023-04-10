@@ -1,0 +1,22 @@
+print('-=' * 30)
+print('       << DESAFIO 36 - SIMULADOR DE EMPRÉSTIMO >>  ')
+print('-=' * 30)
+nome = str(input('Olá, qual é seu nome? '))
+print('\033[36mSeja bem vindo(a) ao nosso simulador de empréstimos imobiliários.\033[m')
+print('-=' * 30)
+print('{}, para iniciarmos preciso de algumas informações: '.format(nome))
+valor = float(input('Qual o valor do imóvel que deseja comprar: '))
+salario = float(input('Certo! E qual a sua renda líquida mensal: '))
+meses = int(input('Por último, em quantos meses deseja parcelar: '))
+print('-='*30)
+print(f'{nome}, conferindo as informações, você deseja financiar um imóvel no valor de R${valor:.2f}, seu salário é {salario:.2f} e deseja pagar em {meses} meses. Correto?')
+parcela = valor / meses
+pag = salario * 0.30
+if parcela > pag:
+    print('O valor da parcela é de \033[31mR${:.2f}\033[m'.format(parcela))
+    print('Seu empréstimo foi \033[31mnegado\033[31m. O valor da parcela ultrapassa o limite de 30% do salário.')
+else:
+    print('O valor da parcela é de \033[32mR${:.2f}\033[m e não ultrapassa os 30% do valor do seu salário'.format(parcela))
+    print('Seu empréstimo foi \033[4;32maprovado\033[m. Parabens!')
+print('-='* 30)
+print('Muito obrigada e tenha um excelente dia.')
