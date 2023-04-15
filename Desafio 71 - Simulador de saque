@@ -1,0 +1,33 @@
+from time import sleep
+print('\033[36m-=\033[m'*22)
+print('  \033[36mDESAFIO 71 - SIMULANDO CAIXA ELETRÔNICO\033[m')
+print('\033[36m-=\033[m'*22)
+nota = nota50 = nota20 = nota10 = 0
+encerrar = 'S'
+while True:
+    valor = int(input('Qual valor você deseja sacar: '))
+    print(f'Certo, você deseja sacar R${valor:.2f}. Um momento por favor....')
+    sleep(1)
+    if valor % 2 != 0:
+        valor = int(input('\nO valor digitado não pode ser sacado. Digite outro valor.'))
+    else:
+        print('Você receberá:')
+        nota50 = valor // 50
+        if nota50 > 0:
+            print(f'{nota50} notas de 50 reais,')
+        total = valor - nota50 * 50
+        nota20 = total // 20
+        if nota20 > 0:
+            print(f'{nota20} notas de 20 reais, ')
+        total = valor - (nota50 * 50) - (nota20 * 20)
+        nota10 = total // 10
+        if nota10 > 0:
+            print(f'{nota10} notas de 10 reais, ')
+        total = valor - (nota10 * 10) - (nota50 * 50) - (nota20 * 20)
+        nota2 = total // 2
+        if nota2 > 0:
+            print(f'{nota2} notas de 2 reais.')
+    encerrar = str(input('Você deseja fazer um novo saque? [S/N] ')).strip().upper()[0]
+    if encerrar == 'N':
+        break
+print('Volte sempre!')

@@ -1,0 +1,23 @@
+print('\033[32m-=\033[m'*15)
+print(' \033[32mDESAFIO 78 - POSIÇÃO VALORES\033[m')
+print('\033[32m-=\033[m'*15)
+valores = []
+maior = menor = posi = posit = valor = 0
+for cont in range(0, 5):
+    valores.append(int(input(f'Digite o valor da posição {cont}: ')))
+    if cont == 0:
+        maior = menor = valores[cont]
+    else:
+        if valores[cont] > maior:
+            maior = valores[cont]
+        if valores[cont] < menor:
+            menor = valores[cont]
+print(f'Você digitou os valores {valores}.')
+print(f'O maior valor é {maior} e está na posição ', end='')
+for i, v in enumerate(valores):
+    if v == maior:
+        print(f'{i}...', end='')
+print(f'\nO menor valor é {menor} e está na posição ', end='')
+for i, v in enumerate(valores):
+    if v == menor:
+        print(f'{i}...', end='')

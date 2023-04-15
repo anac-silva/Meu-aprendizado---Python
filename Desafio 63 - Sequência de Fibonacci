@@ -1,0 +1,16 @@
+print('\033[34m-=\033[m'*11)
+print('\033[34mSequência de Fibonacci\033[m')
+print('\033[34m-=\033[m'*11)
+termos = int(input('Quantos termos você deseja ver? '))
+cont = 3
+a = 0
+b = 1
+c = 0
+print('{} → {} '. format(a, b), end='')
+while cont <= termos:
+    c = a + b
+    a = b
+    b = c
+    cont += 1
+    print('→ {}'.format(c), end= ' ')
+print('Fim')

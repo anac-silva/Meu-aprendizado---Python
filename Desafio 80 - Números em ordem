@@ -1,0 +1,15 @@
+print('-=' * 20)
+print('  << DESAFIO 80 - NÚMEROS EM ORDEM >>  ')
+print('-=' * 20)
+n = list()
+s = 0
+for c in range(0, 5):
+    s = int(input(f'Digite o {c+1}º valor: '))
+    if c == 0:
+        n.append(s)
+    else:
+        if s < n[0]:
+            n.insert(0, s)
+        if s > n[0]:
+            n.insert(c+1, s)
+print(n)

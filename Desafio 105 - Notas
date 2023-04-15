@@ -1,0 +1,30 @@
+print('-=' * 20)
+print('   << DESAFIO 105 - CÁLCULO NOTAS >>  ')
+print('-=' * 20)
+
+
+def notas(*n, sit=False):
+    """
+    Função para analisar notas e situações de vários alunos
+    :param n: uma ou mais notas dos alunos
+    :param sit: valor opcional, indicando se deve ou não adicionar situação
+    :return: dicionário com várias informações sobre a situação da turma.
+    """
+    nota = {}
+    nota['Total'] = len(n)
+    nota['Maior nota'] = max(n)
+    nota['Menor nota'] = min(n)
+    nota['Media'] = sum(n)/len(n)
+    if sit:
+        if nota['Media'] >= 7:
+            nota['Situação'] = 'BOA'
+        elif nota['Media'] >=5:
+            nota['Situação'] = 'RAZOÁVEL'
+        else:
+            nota['Situação'] = 'RUIM'
+    return nota
+
+
+resp = notas(2, 8, 4, 6)
+print(resp)
+help(notas)
