@@ -1,0 +1,21 @@
+from random import randint
+print('-=' * 20)
+print('   << DESAFIO 88 - SORTEANDO JOGOS >>  ')
+print('-=' * 20)
+jogo = []
+j = []
+n = int(input('Quantos jogos você deseja que eu sorteie? '))
+print('-='*15)
+print(f'     Sorteando {n} jogos!!!')
+print('-='*15)
+for tot in range(0, n):
+    for lista in range(0, 6):
+        pc = randint(1, 60)
+        if pc in jogo:
+            pc = randint(1, 60)
+            jogo.append(pc)
+        else:
+            jogo.append(pc)
+    j.append(jogo[:])
+    jogo.clear()
+    print(f'jogo {tot+1}: {j[tot]}')
