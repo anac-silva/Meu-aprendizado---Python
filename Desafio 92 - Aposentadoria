@@ -1,0 +1,17 @@
+from datetime import date
+print('-=' * 20)
+print('   << DESAFIO 92 - APOSENTADORIA >>  ')
+print('-=' * 20)
+dados = {}
+dados['nome'] = str(input('Nome: '))
+ano = int(input('Ano de nascimento: '))
+idade = date.today().year - ano
+dados['idade'] = idade
+dados['CTPS'] = int(input('Numero da carteira de trabalho (0 se não tiver): '))
+if dados['CTPS'] != 0:
+    dados['contratação'] = int(input('Ano que ocorreu a primeira contratação: '))
+    dados['salario'] = float(input('Salário: '))
+    dados['aposentadoria'] = (dados['contratação'] + 35) - ano
+print('-=' * 20)
+for k, v in dados.items():
+    print(f' {k} é {v}')
