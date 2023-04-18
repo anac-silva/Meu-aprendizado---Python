@@ -1,0 +1,32 @@
+print('-=' * 20)
+print(' << DESAFIO 94 - CADASTRO DE PESSOAS >>  ')
+print('-=' * 20)
+pessoas = list()
+dados = dict()
+contidade = media = 0
+c = 'S'
+while True:
+    dados.clear()
+    dados['nome'] = str(input('Nome: '))
+    dados['sexo'] = str(input('Sexo [M/F]: ')).strip().upper()[0]
+    dados['idade'] = int(input('Idade: '))
+    pessoas.append(dados.copy())
+    contidade += dados['idade']
+    c = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
+    if c == 'N':
+        break
+media = contidade / len(pessoas)
+print('-=' * 20)
+print(f'Há {len(pessoas)} pessoas cadastradas')
+print(f'A média de idade é {media:5.2f} anos')
+print(f'O nome das mulheres cadastradas foi: ', end='')
+for p in pessoas:
+    if p['sexo'] in 'F':
+        print(f'{p["nome"]}, ', end='')
+print('\nPessoas acima da média de idade: ')
+for p in pessoas:
+    if p['idade'] >= media:
+        for k, v in p.items():
+            print(f'{k} = {v};  ', end='')
+        print()
+print('== ENCERRADO ==')
