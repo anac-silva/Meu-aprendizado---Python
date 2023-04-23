@@ -1,0 +1,17 @@
+n = 0
+s = []
+while True:
+    n = int(input('Digite um valor: '))
+    if n not in s:
+        s.append(n)
+    else:
+        n = int(input('Valor já digitado. Digite outro valor: '))
+        s.append(n)
+    cont = str(input('Deseja continuar? [S/N]')).strip().upper()[0]
+    if cont not in 'SN':
+        cont = str(input('Dados inválidos. Deseja continuar? [S/N]')).strip().upper()[0]
+    if cont == 'N':
+        break
+print('-='*30)
+s.sort()
+print(f'Os valores digitados foi: {s}.')
