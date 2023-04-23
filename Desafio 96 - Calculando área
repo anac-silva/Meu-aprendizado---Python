@@ -1,0 +1,12 @@
+def area(a, b):
+    s = a * b
+    print(f'A área do terreno de {a} x {b} = {s}m²')
+
+
+print('-=' * 20)
+print('   << DESAFIO 96 - CALCULANDO ÁREA >>  ')
+print('-=' * 20)
+
+l = float(input('largura (m): '))
+c = float(input('comprimento (m): '))
+area(l, c)
