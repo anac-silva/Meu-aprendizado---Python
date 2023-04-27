@@ -1,0 +1,19 @@
+print('-=' * 20)
+print('    << DESAFIO 40 - CÁLCULO IMC >>  ')
+print('-=' * 20)
+print('Olá seja bem vindo ao calculador de IMC')
+nome = str(input('Como devo te chamar? '))
+print('{}, vou precisar de alguns dados antes de começarmos ok?'.format(nome))
+peso = float(input('Qual o seu peso atual? Digite em quilogramas: '))
+alt = float(input('Qual a sua altura em metros? '))
+imc = peso / (alt * alt)
+if imc <= 18.5:
+    print('Seu IMC é {:.2f} e você está abaixo do peso. Cuidado com sua saúde'.format(imc))
+elif imc <= 25:
+    print('Seu IMC é {:.2f} e você está no peso ideal. Parabéns'.format(imc))
+elif imc <= 30:
+    print('Seu IMC é {:.2f} e você está acima do peso. Faça mais atividade física'.format(imc))
+elif imc <= 40:
+    print('Seu IMC é {:.2f} e você está obeso. \033[33mAtenção!\033[m'.format(imc))
+elif imc > 40:
+    print('Seu IMC é {:.2f} e você está em obesidade morbida. \033[31mCuidado!\033[m'.format(imc))
