@@ -1,0 +1,8 @@
+print('-=' * 20)
+print('       << DESAFIO 49 - TABUADA >>  ')
+print('-=' * 20)
+print('Olá, bem vindo')
+n = int(input('Qual numero deseja ver a tabuada?'))
+for t in range(0, 11,):
+    print('{} x {} = {}'.format(n, t, (n * t)))
+print('FIM')
