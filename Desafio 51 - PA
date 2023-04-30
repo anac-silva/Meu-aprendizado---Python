@@ -1,0 +1,9 @@
+print('-=' * 15)
+print('      \033[31mDESAFIO 50 - PA\033[m')
+print('-=' * 15)
+p = int(input('Primeiro termo: '))
+r = int(input('Razão: '))
+n = p + 10 * r
+for c in range(p, n + r, r):
+    print('{}'.format(c), end= ' → ')
+print('Fim')
