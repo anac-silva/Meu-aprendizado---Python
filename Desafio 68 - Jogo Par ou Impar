@@ -1,0 +1,36 @@
+print('-='*20)
+print('     \033[35mDESAFIO 68 - JOGO PAR OU IMPAR\033[m')
+print('-='*20)
+from random import randint
+cont = soma = 0
+final = 0
+while True:
+    valor = int(input('Digite um valor: '))
+    pc = randint(0, 11)
+    pi = str(input('Você quer ser par ou impar? [P/I] ')).strip().upper()[0]
+    print('-='*20)
+    soma = valor + pc
+    if soma % 2 == 0:
+        print(f'Você escolheu {valor} e o computador escolheu {pc}. O total deu {soma} DEU PAR.')
+        r = 'P'
+        if pi == r:
+            print('Você venceu!')
+            print('-='*20)
+            cont += 1
+        else:
+            print(f'GAME OVER. Você venceu {cont} vezes ')
+            final = 'PERDEU'
+    else:
+        print(f'Você escolheu {valor} e o computador escolheu {pc}. O total deu {soma} DEU IMPAR.')
+        r = 'I'
+        if pi == r:
+            cont += 1
+            print('Você venceu!')
+            print('-='*20)
+        else:
+            print(f'GAME OVER. Você venceu {cont} vezes ')
+            final = 'PERDEU'
+    if final == 'PERDEU':
+        break
+print('-='*20)
+print('fim')
