@@ -1,0 +1,42 @@
+print('-='*20)
+print('     \033[35mDESAFIO 69 - ANALISANDO DADOS\033[m')
+print('-='*20)
+idade = maior = menor = contpessoas = maisidade = mmenor = conthomem = maisvelho = maisnovo = 0
+continuar = 'S'
+while True:
+    nome = str(input('Digite o nome: '))
+    idade = int(input('Digite a idade: '))
+    sexo = str(input('Digite o sexo: [M/F] ')).strip().upper()[0]
+    while sexo not in 'mMfF':
+        sexo = str(input('Dados inválidos. Digite o sexo: [M/F] ')).strip().upper()[0]
+    continuar = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
+    while continuar not in 'SsNn':
+        sexo = str(input('Dados inválidos. Deseja continuar? [S/N] ')).strip().upper()[0]
+    contpessoas += 1
+    if sexo == 'F':
+        if idade <= 20:
+            mmenor += 1
+        elif idade >= 18:
+            maisidade += 1
+    if sexo == 'M':
+        conthomem += 1
+        if conthomem == 1:
+            maior = idade
+            menor = idade
+            maisvelho = nome
+            maisnovo = nome
+        else:
+            if idade > maior:
+                maior = idade
+                maisvelho = nome
+            if idade < menor:
+                menor = idade
+                maisnovo = nome
+        if idade >= 18:
+            maisidade += 1
+    if continuar == 'N':
+        break
+print(f'Você digitou o nome de {contpessoas} pessoas.')
+print(f'Há {mmenor} mulheres com idade de até 20 anos. Há {maisidade} pessoas maiores de 18 anos e {conthomem} homens cadastrados.')
+print(f'O homem mais velho tem {maior} e se chama {maisvelho} e o mais novo tem {menor} e se chama {maisnovo}')
+print('FIM')
